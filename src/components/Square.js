@@ -1,16 +1,16 @@
 import React from "react"
 
 class Square extends React.Component{
-constructor(){
-    super()
-    this.state = {
-        value: null,
+    constructor(){
+        super()
+        this.state = {
+            value: null
+        }
     }
-}
 
     render(){
         return (
-            <button className="square" onClick={() => this.setState({value: "Y"})}>{this.state.value}</button>
+            <button className="square" onClick={() => this.props.onClick()}>{this.props.value}</button>
         )
     }
 }
